@@ -93,6 +93,7 @@ You can bind your model with autocomplete address components.
 - <b>`vs-street`</b> - gets street name of place
 - <b>`vs-city`</b> - gets city name of place
 - <b>`vs-state`</b> - gets state name of place
+- <b>`vs-state-short`</b> - gets state short name of place
 - <b>`vs-country-short`</b> - gets country iso code of place
 - <b>`vs-country`</b> - gets country name of place
 - <b>`vs-latitude`</b> - gets latitude of place
@@ -112,6 +113,7 @@ You can bind your model with autocomplete address components.
          vs-street="address.components.street"
          vs-city="address.components.city"
          vs-state="address.components.state"
+         vs-state-short="address.components.stateCode"
          vs-country-short="address.components.countryCode"
          vs-country="address.components.country"
 	     vs-district = "address.components.district"

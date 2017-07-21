@@ -65,9 +65,15 @@ angular.module('vsGoogleAutocomplete').factory('vsGooglePlaceUtility', function(
 	}
 
 	function getState(place) {
-		var COMPONENT_TEMPLATE = { administrative_area_level_1: 'short_name' },
+		var COMPONENT_TEMPLATE = { administrative_area_level_1: 'long_name' },
 			state = getAddrComponent(place, COMPONENT_TEMPLATE);
 		return state;
+	}
+
+	function getStateShort(place) {
+		var COMPONENT_TEMPLATE = { administrative_area_level_1: 'short_name' },
+			state = getAddrComponent(place, COMPONENT_TEMPLATE);
+		return stateShort;
 	}
 
 	function getDistrict(place) {
@@ -115,6 +121,7 @@ angular.module('vsGoogleAutocomplete').factory('vsGooglePlaceUtility', function(
 		getStreet: getStreet,
 		getCity: getCity,
 		getState: getState,
+		getStateShort: getStateShort,
 		getCountryShort: getCountryShort,
 		getCountry: getCountry,
 		getLatitude: getLatitude,
@@ -136,6 +143,7 @@ angular.module('vsGoogleAutocomplete').directive('vsGoogleAutocomplete', ['vsGoo
 			vsStreet: '=?',
 			vsCity: '=?',
 			vsState: '=?',
+			vsStateShort: '=?',
 			vsCountryShort: '=?',
 			vsCountry: '=?',
 			vsPostCode: '=?',
@@ -157,6 +165,7 @@ angular.module('vsGoogleAutocomplete').directive('vsGoogleAutocomplete', ['vsGoo
 				$scope.vsCity          = !!$attrs.vsCity && place         ? vsGooglePlaceUtility.getCity(place)         : undefined;
 				$scope.vsPostCode      = !!$attrs.vsPostCode && place     ? vsGooglePlaceUtility.getPostCode(place)     : undefined;
 				$scope.vsState         = !!$attrs.vsState && place        ? vsGooglePlaceUtility.getState(place)        : undefined;
+				$scope.vsStateShort    = !!$attrs.vsStateShort && place   ? vsGooglePlaceUtility.getStateShort(place)   : undefined;
 				$scope.vsCountryShort  = !!$attrs.vsCountryShort && place ? vsGooglePlaceUtility.getCountryShort(place) : undefined;
 				$scope.vsCountry       = !!$attrs.vsCountry && place      ? vsGooglePlaceUtility.getCountry(place)      : undefined;
 				$scope.vsLatitude      = !!$attrs.vsLatitude && place     ? vsGooglePlaceUtility.getLatitude(place)     : undefined;
