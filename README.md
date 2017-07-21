@@ -29,7 +29,7 @@ Angularjs autocomplete module using [Google Maps JavaScript API v3](https://deve
 ## Install
 #### [Bower](http://bower.io)
 ```bash
-bower install vs-google-autocomplete
+bower install ds-google-autocomplete
 ```
 
 ## Getting started
