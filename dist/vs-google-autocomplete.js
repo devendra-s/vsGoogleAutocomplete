@@ -1,5 +1,5 @@
 /**
- * vsGoogleAutocomplete - v0.5.0 - 2017-07-21
+ * vsGoogleAutocomplete - v0.5.0 - 2017-07-27
  * https://github.com/vskosp/vsGoogleAutocomplete
  * Copyright (c) 2017 K.Polishchuk
  * License: MIT
@@ -135,7 +135,8 @@ angular.module('vsGoogleAutocomplete').factory('vsGooglePlaceUtility', function(
 		getLatitude: getLatitude,
 		getLongitude: getLongitude,
 		getPostCode: getPostCode,
-		getDistrict: getDistrict
+		getDistrict: getDistrict,
+		getAddrComponent:getAddrComponent
 	};
 });
 

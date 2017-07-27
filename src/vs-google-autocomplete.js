@@ -127,7 +127,8 @@ angular.module('vsGoogleAutocomplete').factory('vsGooglePlaceUtility', function(
 		getLatitude: getLatitude,
 		getLongitude: getLongitude,
 		getPostCode: getPostCode,
-		getDistrict: getDistrict
+		getDistrict: getDistrict,
+		getAddrComponent:getAddrComponent
 	};
 });
 
